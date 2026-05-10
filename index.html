@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Một món quà nhỏ bằng HTML, CSS và JavaScript dành cho người thương."
+    />
+    <title>Our Love Story</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <section id="opening" class="opening-screen" aria-label="Mở món quà">
+      <div class="opening-glow"></div>
+      <div class="opening-content">
+        <p class="eyebrow">Our Love Story</p>
+        <h1 id="openingTitle">Dành riêng cho cô gái đặc biệt nhất của anh</h1>
+        <p class="opening-note">Có một điều nhỏ đang đợi em mở ra.</p>
+        <button id="openGiftButton" class="love-button" type="button">
+          Mở món quà của anh
+        </button>
+      </div>
+    </section>
+
+    <div class="ambient-layer" aria-hidden="true"></div>
+
+    <main id="mainContent" class="main-content" aria-live="polite">
+      <nav class="music-control" aria-label="Điều khiển nhạc">
+        <button id="musicToggle" class="icon-button" type="button" aria-label="Bật hoặc tắt nhạc">
+          <span id="musicIcon">♪</span>
+        </button>
+      </nav>
+
+      <section id="hero" class="hero-section section">
+        <div class="section-inner hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow" id="heroEyebrow">For you</p>
+            <h2 id="heroTitle"></h2>
+            <p id="heroSubtitle" class="hero-subtitle"></p>
+            <div class="typing-box" aria-live="polite">
+              <span id="typingText"></span><span class="typing-cursor">|</span>
+            </div>
+          </div>
+          <div class="hero-memory reveal">
+            <div class="moon"></div>
+            <p>const love = "forever";</p>
+            <span>Nếu cuộc đời là một đoạn code dài, thì em là dòng comment dịu dàng nhất.</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="loveCounter" class="section counter-section">
+        <div class="section-inner">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Love Counter</p>
+            <h2>Chúng ta đã bên nhau</h2>
+          </div>
+          <div id="counterGrid" class="counter-grid reveal"></div>
+          <p id="counterFallback" class="muted-text"></p>
+        </div>
+      </section>
+
+      <section id="timeline" class="section timeline-section">
+        <div class="section-inner">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Những mốc nhỏ</p>
+            <h2>Câu chuyện của tụi mình</h2>
+          </div>
+          <div id="timelineList" class="timeline-list"></div>
+        </div>
+      </section>
+
+      <section id="gallery" class="section gallery-section">
+        <div class="section-inner">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Album</p>
+            <h2>Những khoảnh khắc anh muốn giữ mãi</h2>
+          </div>
+          <div id="galleryGrid" class="gallery-grid"></div>
+        </div>
+      </section>
+
+      <section id="reasons" class="section reasons-section">
+        <div class="section-inner">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Reasons</p>
+            <h2>Những lý do anh thương em</h2>
+          </div>
+          <div id="reasonsList" class="reasons-list"></div>
+          <div class="center-actions reveal">
+            <button id="showMoreReasons" class="ghost-button" type="button">Xem thêm yêu thương</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="letter" class="section letter-section">
+        <div class="section-inner">
+          <article class="letter-card reveal">
+            <p class="eyebrow">Love Letter</p>
+            <h2 id="letterTitle"></h2>
+            <div id="letterBody" class="letter-body"></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="final" class="section final-section">
+        <div class="section-inner final-panel reveal">
+          <p class="eyebrow">One more thing</p>
+          <h2 id="finalQuestion"></h2>
+          <div class="final-actions">
+            <button id="hugButton" class="love-button" type="button">Nhận một cái ôm từ anh</button>
+            <button id="shyButton" class="ghost-button shy-button" type="button">Để em suy nghĩ thêm</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="galleryModal" class="modal" aria-hidden="true" role="dialog" aria-label="Xem ảnh lớn">
+      <button class="modal-close" data-close-gallery type="button" aria-label="Đóng ảnh">×</button>
+      <figure class="gallery-modal-card">
+        <img id="galleryModalImage" src="" alt="" />
+        <figcaption id="galleryModalCaption"></figcaption>
+      </figure>
+    </div>
+
+    <div id="hugModal" class="modal" aria-hidden="true" role="dialog" aria-label="Cái ôm từ anh">
+      <div class="hug-card">
+        <button class="modal-close" data-close-hug type="button" aria-label="Đóng lời nhắn">×</button>
+        <div class="hug-heart" aria-hidden="true">❤</div>
+        <h2 id="hugTitle"></h2>
+        <p id="hugMessage"></p>
+        <button id="sendFacebookMessage" class="love-button" type="button">
+          Giữ cái ôm này trong tim
+        </button>
+      </div>
+    </div>
+
+    <audio id="bgMusic" loop preload="none"></audio>
+    <div id="youtubeMusic" class="youtube-music" aria-hidden="true"></div>
+
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
